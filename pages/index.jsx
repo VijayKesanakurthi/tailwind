@@ -13,7 +13,6 @@ import Posts from "../components/posts"
         <Head>
           <title> Instagram</title>
                <link rel='icon' type="image/icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/600px-Instagram_icon.png?20200512141346" />
-          
         </Head>
       <Nav comp={"nav"}>
         <Status/>
