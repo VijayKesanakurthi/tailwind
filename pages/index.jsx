@@ -4,7 +4,6 @@ import Nav from "../components/nav"
 import Status from "../components/status"
 import Posts from "../components/posts"
 
-
 // import '../styles/globals.css'
 
   export default function Home(){
