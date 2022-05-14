@@ -7,6 +7,7 @@ import {BsEmojiSmile} from "react-icons/bs"
 
 export default function Post({data}){
   const [like,setLike]=useState(false);
+  const [click,setClick]=useState(false);
   const ref=useRef(null)
   return(
     <div className='flex pt-4 justify-center tems-center '>
@@ -20,13 +21,21 @@ export default function Post({data}){
       <p className='font-bold p-2 flex-1'>{data.name}</p>
       <p className=' hover:cursor-pointer font-bold px-4'>...</p>
     </div>
+        <div  className="relative">
     <Image  src={data.post}
         alt="samantha"
       objectFit="cover"
       layout="responsive"
       height={16}
       width={9}
+      onClick={e => {
+  if (e.detail === 2){
+    setClick(!click);
+    setLike(true);
+    setTimeout(()=>setClick(false),700)}}}
     />
+          {click&&  <FaHeart className="absolute animate-ping duration-500  left-[40%] top-[40%] text-white h-24 w-24 md:h-32 md:w-32"/>}
+          </div>
   <div className='flex items-center w-full'>
     <div className='flex-1 py-4 px-4 space-x-4 flex items-center'>
       <div onClick={()=>setLike(!like)}> 

@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import Nav from "../components/nav"
 import Status from "../components/status"
 import Posts from "../components/posts"
